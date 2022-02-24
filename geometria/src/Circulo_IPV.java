@@ -6,7 +6,13 @@ public class Circulo_IPV extends FiguraGeometrica_IPV {
 	
 	public Circulo_IPV(double r, String tipoFigura) {
 		super(tipoFigura);
-		radio = r;
+		if(radio > 0) {
+			radio = r;
+		}else {
+			radio = radio * (-1);
+		}
+		
+		
 	}
 
 	@Override
